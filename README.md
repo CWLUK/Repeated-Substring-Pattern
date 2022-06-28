@@ -1,2 +1,1 @@
-# Repeated-Substring-Pattern
-String
+https://leetcode.com/problems/repeated-substring-pattern
