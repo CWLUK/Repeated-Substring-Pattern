@@ -1,0 +1,34 @@
+class Solution {
+public:
+    bool repeatedSubstringPattern(string s) {
+        for (int i=1; i<=s.size()/2; i++){
+            if (s.size() % i == 0){
+                int n = i;
+                string temp = s.substr(0, n);
+                while (n < s.size()){
+                    if (s.find(temp, n) != n) break;
+                    n += i;
+                }
+                if (n == s.size()) return true;
+            }
+        }
+        return false;                
+
+/*
+        vector<int> factor;
+        for (int i=1; i<=s.size()/2; i++){
+            if (s.size() % i == 0) factor.push_back(i);
+        }
+        for (auto j : factor){
+            int n = j;
+            string temp = s.substr(0, n);
+            while (n < s.size()){
+                if (s.find(temp, n) != n) break;
+                n += j;
+            }
+            if (n == s.size()) return true;
+        }
+        return false;
+*/
+    }
+};
