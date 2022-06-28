@@ -1,0 +1,2 @@
+# Repeated-Substring-Pattern
+String
